@@ -12,42 +12,42 @@
 
     <div class="container">
         <div class="display">
-            <h1>Output</h1>
+            <h1 id="output">Output</h1>
         </div>
         <div class="buttoncontainer">
-                <button class="btn, col1" id="c"   onclick="ac()"   >C</button>
+                <button class="btn, col1" id="c"onclick="ac(), outputtext()">C</button>
 
-                <button class="btn" id="/" onclick="opperand('/')">/</button>
+                <button class="btn" id="/" onclick="opperand('/'), outputtext()">/</button>
 
-                <button class="btn" id="*" onclick="opperand('*')">*</button>
+                <button class="btn" id="*" onclick="opperand('*'), outputtext()">*</button>
 
-                <button class="btn, col4" id="-" onclick="opperand('-')">-</button>
+                <button class="btn, col4" id="-" onclick="opperand('-'), outputtext()">-</button>
 
-                <button class="btn, col1" id="7" onclick="number('7')">7</button>
+                <button class="btn, col1" id="7" onclick="number('7'), outputtext()">7</button>
 
-                <button class="btn" id="8" onclick="number('8')">8</button>
+                <button class="btn" id="8" onclick="number('8'), outputtext()">8</button>
 
-                <button class="btn" id="9" onclick="number('9')">9</button>
+                <button class="btn" id="9" onclick="number('9'), outputtext()">9</button>
 
-                <button class="btn, col4" id="+" onclick="opperand('+')" >+</button>
+                <button class="btn, col4" id="+" onclick="opperand('+'), outputtext()">+</button>
 
-                <button class="btn, col1" id="4" onclick="number('4')">4</button>
+                <button class="btn, col1" id="4" onclick="number('4'), outputtext()">4</button>
 
-                <button class="btn" id="5" onclick="number('5')">5</button>
+                <button class="btn" id="5" onclick="number('5'), outputtext()">5</button>
 
-                <button class="btn" id="6" onclick="number('6')">6</button>
+                <button class="btn" id="6" onclick="number('6'), outputtext()">6</button>
 
-                <button class="btn, col4" id="=" onclick="equals()">=</button>
+                <button class="btn, col4" id="=" onclick="equals(), outputtext()">=</button>
 
-                <button class="btn, col1" id="1" onclick="number('1')">1</button>
+                <button class="btn, col1" id="1" onclick="number('1'), outputtext()">1</button>
 
-                <button class="btn" id="2" onclick="number('2')" >2</button>
+                <button class="btn" id="2" onclick="number('2'), outputtext()">2</button>
 
-                <button class="btn" id="3" onclick="number('3')">3</button>
+                <button class="btn" id="3" onclick="number('3'), outputtext()">3</button>
 
-                <button class="btn, col4" id="." onclick="number('.')">.</button>
+                <button class="btn, col4" id="." onclick="number('.'), outputtext()">.</button>
 
-                <button class="btn, bottom" id="0" onclick="number(0) " >0</button>
+                <button class="btn, bottom" id="0" onclick="number(0), outputtext()">0</button>
         </div>
     </div>
 </body>
