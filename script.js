@@ -42,13 +42,13 @@ function number(num) {
     }
 }
 
-function outputtext() {
-    if (mainnum === Infinity || mainnum === -Infinity || mainnum === NaN || mainnum === -NaN) {
-        output.innerHTML = 'You did some dumbshit, like divide by zero';
+function outputtext() {// if mainnum is infinty or NaN then log to console
+    if (mainnum == 'Infinity' || mainnum == 'NaN') {
+        output.innerHTML = 'Syntax Error';
     }
     else {
     outputstring = mainnum + operand + subnum;
-    output.innerHTML = outputstring;
+   output.innerHTML = outputstring;
     }
 }
 
