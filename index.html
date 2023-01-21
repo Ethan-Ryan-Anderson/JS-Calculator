@@ -15,22 +15,39 @@
             <h1>Output</h1>
         </div>
         <div class="buttoncontainer">
-             <div class="r1c1, button, col1">C</div>
-             <div class="r1c2, button">/</div>
-             <div class="r1c3, button">*</div>
-             <div class="r1c4, button, col4">+</div>
-             <div class="r2c1, button, col1">7</div>
-              <div class="r2c2, button">8</div>
-              <div class="r2c3, button">9</div>
-              <div class="r2c4, button, col4">-</div>
-              <div class="r3c1, button, col1">4</div>
-              <div class="r3c2, button">5</div>
-              <div class="r3c3, button">6</div>
-              <div class="r3c4, button, col4">=</div>
-              <div class="r4c1, button, col1">1</div>
-              <div class="r4c2, button">2</div>
-              <div class="r4c3, button">3</div>
-              <div class="r4c4, button, col4">0</div>
+                <button class="btn, col1" id="c"   onclick="ac()"   >C</button>
+
+                <button class="btn" id="/" onclick="opperand('/')">/</button>
+
+                <button class="btn" id="*" onclick="opperand('*')">*</button>
+
+                <button class="btn, col4" id="-" onclick="opperand('-')">-</button>
+
+                <button class="btn, col1" id="7" onclick="number('7')">7</button>
+
+                <button class="btn" id="8" onclick="number('8')">8</button>
+
+                <button class="btn" id="9" onclick="number('9')">9</button>
+
+                <button class="btn, col4" id="+" onclick="opperand('+')" >+</button>
+
+                <button class="btn, col1" id="4" onclick="number('4')">4</button>
+
+                <button class="btn" id="5" onclick="number('5')">5</button>
+
+                <button class="btn" id="6" onclick="number('6')">6</button>
+
+                <button class="btn, col4" id="=" onclick="equals()">=</button>
+
+                <button class="btn, col1" id="1" onclick="number('1')">1</button>
+
+                <button class="btn" id="2" onclick="number('2')" >2</button>
+
+                <button class="btn" id="3" onclick="number('3')">3</button>
+
+                <button class="btn, col4" id="." onclick="number('.')">.</button>
+
+                <button class="btn, bottom" id="0" onclick="number(0) " >0</button>
         </div>
     </div>
 </body>
