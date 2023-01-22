@@ -30,16 +30,13 @@ function number(num) {
 
    else if (operandcnt % 2 == 0) {
    subnum = subnum + num;
-
-
-
     }
 
     else if (operandcnt % 2 == !0) {
         subnum = subnum + num;
          console.log(subnum);
     }
-    else {
+        else {
         console.log('error');
     }
 }
@@ -58,8 +55,12 @@ function outputtext() {
 function ac() {
     mainnum = '';
     subnum = '';
+    postoperand = false;
     operand = '';
-    output.innerHTML = 'Cleared';
+    decamount = 0;
+    operandcnt = 0;
+     outputstring = '';
+    output.innerHTML = "Cleared"
 }
 
 
