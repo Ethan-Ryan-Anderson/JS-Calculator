@@ -29,38 +29,18 @@ function number(num) {
     }
 
    else if (operandcnt % 2 == 0) {
-    if (operand == '+') {
-        subnum = Number(subnum) + Number(num);
-        console.log(subnum);
-    }
-    else if (operand == '-') {
-        subnum = Number(subnum) + Number(num);
-        console.log(subnum);
-    }
-    else if (operand == '*') {
-        subnum = Number(subnum) + Number(num);
-        console.log(subnum);
+   subnum = subnum + num;
 
-    }
-    else if (operand == '/') {
-        subnum = Number(subnum) + Number(num);
-        console.log(subnum);
-    }
 
-    else if (operandcnt % 2 == !0) {
-        subnum = Number(subnum) + num;
-         console.log(subnum);
-    }
-
-    else {
-        console.log('error');
-    }
 
     }
 
     else if (operandcnt % 2 == !0) {
         subnum = subnum + num;
          console.log(subnum);
+    }
+    else {
+        console.log('error');
     }
 }
 
@@ -81,6 +61,8 @@ function ac() {
     operand = '';
     output.innerHTML = 'Cleared';
 }
+
+
 
 function equals(a) {
     if (operand == '+') {
