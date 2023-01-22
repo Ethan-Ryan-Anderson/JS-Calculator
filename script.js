@@ -1,16 +1,15 @@
-
 var mainnum = '';
 var subnum = '';
+var postoperand = false;
 var operand = '';
 var decamount = 0;
 var operandcnt = 0;
 var output = document.getElementById('output');
-
 var outputstring = '';
 
 
 function opperand(opp) {
-    if (operandcnt % 2 == 0) {
+    if (operandcnt >= 1) {
         equals();
         operand = opp;
         operandcnt++;
@@ -22,53 +21,57 @@ function opperand(opp) {
 
 }
 
+    /////////////////
 function number(num) {
     if (operandcnt == 0) {
         mainnum = mainnum + num;
         console.log(mainnum);
-       // output.innerHTML = mainnum;
     }
 
    else if (operandcnt % 2 == 0) {
     if (operand == '+') {
-       mainnum = Number(mainnum) + Number(num);
-       console.log(mainnum);
-       operand = '';
-       // output.innerHTML = mainnum;
+        subnum = Number(subnum) + Number(num);
+        console.log(subnum);
     }
     else if (operand == '-') {
-        mainnum = Number(mainnum) - Number(num);
-        console.log(mainnum);
-        operand = '';
-       // output.innerHTML = mainnum;
+        subnum = Number(subnum) + Number(num);
+        console.log(subnum);
     }
     else if (operand == '*') {
-        mainnum = Number(mainnum) * Number(num);
-        console.log(mainnum);
-        operand = '';
-         // output.innerHTML = mainnum;
+        subnum = Number(subnum) + Number(num);
+        console.log(subnum);
+
     }
     else if (operand == '/') {
-        mainnum = Number(mainnum) / Number(num);
-        console.log(mainnum);
-        operand = '';
-        // output.innerHTML = mainnum;
+        subnum = Number(subnum) + Number(num);
+        console.log(subnum);
     }
-    }
+
     else if (operandcnt % 2 == !0) {
-    subnum = subnum + num;
+        subnum = Number(subnum) + num;
          console.log(subnum);
-        //output.innerHTML = mainnum;
+    }
+
+    else {
+        console.log('error');
+    }
+
+    }
+
+    else if (operandcnt % 2 == !0) {
+        subnum = subnum + num;
+         console.log(subnum);
     }
 }
 
-function outputtext() {// if mainnum is infinty or NaN then log to console
-    if (mainnum == 'Infinity' || mainnum == 'NaN') {
-        output.innerHTML = 'Syntax Error';
+
+function outputtext() {
+    if (mainnum == 'Infinity' || mainnum == -'Infinity' || mainnum == 'NaN' || mainnum == '-NaN') {
+        output.innerHTML = 'You did some dumbshit, like divide by zero, or have multiple operands in a row, and or have more than one decimal point in a number.';
     }
     else {
     outputstring = mainnum + operand + subnum;
-   output.innerHTML = outputstring;
+    output.innerHTML = outputstring;
     }
 }
 
@@ -76,7 +79,7 @@ function ac() {
     mainnum = '';
     subnum = '';
     operand = '';
-    output.innerHTML = " "; //THERE IS AN INVISIBLE UNICODE CAHRACTER IN THE OUTPUT TO HAVE IT LOOK RIGHT
+    output.innerHTML = 'Cleared';
 }
 
 function equals(a) {
@@ -113,8 +116,12 @@ function equals(a) {
         operand = '';
             }
     else if (operand == '%') {
-        mainnum = Number(mainnum) / 100;
+        var sum = Number(mainnum) / 100;
+        console.log(sum);
+      //  output.innerHTML = sum;
+        mainnum = sum.toString();
         subnum = '';
         operand = '';
     }
+
 }
