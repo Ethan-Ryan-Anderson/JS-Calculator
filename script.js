@@ -1,15 +1,16 @@
+
 var mainnum = '';
 var subnum = '';
-var postoperand = false;
 var operand = '';
 var decamount = 0;
 var operandcnt = 0;
 var output = document.getElementById('output');
+
 var outputstring = '';
 
 
 function opperand(opp) {
-    if (operandcnt >= 1) {
+    if (operandcnt % 2 == 0) {
         equals();
         operand = opp;
         operandcnt++;
@@ -21,7 +22,6 @@ function opperand(opp) {
 
 }
 
-    /////////////////
 function number(num) {
     if (operandcnt == 0) {
         mainnum = mainnum + num;
@@ -30,10 +30,30 @@ function number(num) {
     }
 
    else if (operandcnt % 2 == 0) {
+    if (operand == '+') {
        mainnum = Number(mainnum) + Number(num);
        console.log(mainnum);
        operand = '';
        // output.innerHTML = mainnum;
+    }
+    else if (operand == '-') {
+        mainnum = Number(mainnum) - Number(num);
+        console.log(mainnum);
+        operand = '';
+       // output.innerHTML = mainnum;
+    }
+    else if (operand == '*') {
+        mainnum = Number(mainnum) * Number(num);
+        console.log(mainnum);
+        operand = '';
+         // output.innerHTML = mainnum;
+    }
+    else if (operand == '/') {
+        mainnum = Number(mainnum) / Number(num);
+        console.log(mainnum);
+        operand = '';
+        // output.innerHTML = mainnum;
+    }
     }
     else if (operandcnt % 2 == !0) {
     subnum = subnum + num;
@@ -55,8 +75,8 @@ function outputtext() {// if mainnum is infinty or NaN then log to console
 function ac() {
     mainnum = '';
     subnum = '';
-    postoperand = false;
     operand = '';
+    output.innerHTML = " "; //THERE IS AN INVISIBLE UNICODE CAHRACTER IN THE OUTPUT TO HAVE IT LOOK RIGHT
 }
 
 function equals(a) {
@@ -92,5 +112,9 @@ function equals(a) {
         subnum = '';
         operand = '';
             }
-
+    else if (operand == '%') {
+        mainnum = Number(mainnum) / 100;
+        subnum = '';
+        operand = '';
+    }
 }
